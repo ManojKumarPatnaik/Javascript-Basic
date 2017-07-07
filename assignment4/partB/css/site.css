@@ -1,0 +1,100 @@
+/*********************************************************************************
+*
+* WEB222 – Assignment #4b
+*
+* I declare that this assignment is my own work in accordance with Seneca
+* Academic Policy. No part of this assignment has been copied manually or
+* electronically from any other source (including web sites) or distributed to
+* other students.
+*
+* Name: _____Zixian Ou______ Student ID: __125421164_____ Date: ___2017/03/26_____
+*
+********************************************************************************/
+.main-container {
+    max-width:960px;
+    margin: 0px auto;
+}
+
+.main-container nav {
+    width:30%;
+    float:left;
+}
+
+.main-container .main {
+    width:70%;
+    float:right;
+}
+
+.main-container header {
+    padding: 10px;
+    background-color: #eeeeee;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 30px;
+}
+
+.main-container header h1 {
+    width:70%;
+    font-size: 24px;
+    float:right;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.main-container footer {
+    clear:both;
+    padding: 20px 10px;
+    background-color: #eeeeee;
+    border-top:1px solid #cccccc;
+    font-size:13px;
+}
+
+#logo{
+    width:30%;
+    font-size:25px;
+    font-weight: bold;
+}
+
+#logo img {
+    width:94px;
+    vertical-align: middle;
+    position: relative;
+
+}
+
+nav ul{
+    list-style-type:none;
+}
+nav ul a {
+    display: block;
+    text-decoration:none;
+    padding:5px;
+}
+
+div.province{
+    width:30%;
+    float:left;
+    margin:8px;
+    height: 310px;
+}
+
+div.province .description{
+    max-height: 165px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+div.province a {
+    display:block;
+    text-align: center;
+    background-color: #555555;
+    color: #eeeeee;
+    text-decoration: none;
+    padding: 5px;
+}
+
+img.flag{
+  width: 100%;
+}

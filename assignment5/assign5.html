@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/assign5.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/assign5.css">
+  <title>Sign Up</title>
+</head>
+<body>
+
+<form name="signup" action="https://httpbin.org/post" method="post" onsubmit="return validateForm(this)">
+
+    <div id="basic" name="basicInfo">
+          <div id="title-basic" class="title">Basic Information</div>
+          <br>
+          Email:<span id="asterisk">*</span>
+          <input type="email" name="email" required autofocus>
+          <p/>
+          Password:<span id="asterisk">*</span>
+          <input type="password" id="password" name="password" onchange="validPassword(this)" required>
+          <div id="pass-error" class="errMsg"></div>
+          <p/>
+          Retype Password:<span id="asterisk">*</span>
+          <input type="password" id="rtpassword" name="rtpassword" onchange="validRTPassword(this)" required>
+            <div id="rtpass-error" class="errMsg"></div>
+          <p/>
+          First Name:<span id="asterisk">*</span>
+          <input type="text" name="firstname" onchange="validName(this,'first-error')" required>
+          <div id="first-error" class="errMsg"></div>
+          <p/>
+          Last Name:<span id="asterisk">*</span>
+          <input type="text" name="lastname" onchange="validName(this,'last-error')"  required>
+          <div id="last-error" class="errMsg"></div>
+          <p/>
+          Phone Number:<span id="asterisk">*</span>
+          <input type="tel" name="phoneNum" onchange="validphone(this)" placeholder="999-999-9999" required>
+          <div id="phone-error" class="errMsg"></div>
+          <p/>
+          Address:<span id="asterisk">*</span>
+          <input type="text" name="address" required>
+          <p/>
+          City:<span id="asterisk">*</span>
+          <input type="text" name="city" required>
+          <p/>
+          Province:<span id="asterisk">*</span>
+          <select name="province" size="1" required>
+            <optgroup label="Provinces">
+              <option value="AB" selected>Alberta</option>
+              <option value="BC">British Columbia</option>
+              <option value="MB">Manitoba</option>
+              <option value="NB">New Brunswick</option>
+              <option value="NL">Newfoundland and Labrador</option>
+              <option value="NS">Nova Scotia</option>
+              <option value="ON">Ontario</option>
+              <option value="PE">Prince Edward Island</option>
+              <option value="QC">Quebec</option>
+              <option value="SK">Saskatchewan</option>
+            </optgroup>
+
+            <optgroup label="Territories">
+              <option value="NT">Northwest Territories</option>
+              <option value="NU">Nunavut</option>
+              <option value="YT">Yukon</option>
+            </optgroup>
+
+          </select>
+          <p/>
+          Country:<span id="asterisk">*</span>
+          <input type="text" list="country" required>
+          <datalist id="country">
+              <option value="Canada">
+              <option value="The United States">
+              <option value="China">
+              <option value="The United Kingdom">
+              <option value="Russia">
+          </datalist>
+          <br><br>
+    </div>
+
+    <div id="eduction" name="eduInfo">
+        <div id="title-edu" class="title">Education</div>
+        <br>
+          School:<span id="asterisk">*</span>
+          <input type="text" name="school" required>
+          <p/>
+          Program:<span id="asterisk">*</span>
+          <input type="text" name="program" required>
+          <p/>
+          Education Level:<span id="asterisk">*</span>
+          <select name="eduLevel" size="1" required>
+            <option value="0" selected>-select-</option>
+            <option value="Technical">Technical Diploma</option>
+            <option value="College">College Diploma</option>
+            <option value="Bachelor">Bachelor's Degree</option>
+            <option value="Master">Master's Degree</option>
+            <option value="others">Others</option>
+          </select>
+          <p/>
+          <fieldset name="eduStatusField">
+            <legend>Education Status</legend>
+            <input type="radio" name="eduStatus" value="graduated" onclick="validEduStatus(this)">Graduated</input><br>
+            <input type="radio" name="eduStatus" value="current" onclick="validEduStatus(this)">Current Enrolled</input><br>
+            <input type="radio" name="eduStatus" value="notgrad" onclick="validEduStatus(this)" >Did Not Graduate</input><br>
+          </fieldset>
+          <div id="eduStatus-error" class="errMsg"></div>
+          <p/>
+          Graduation Date:
+          <input type="text" name="graDate" required>
+          <br><br>
+    </div>
+    <div id="work" name="workInfo">
+      <div id="title-work" class="title">Work Exprience</div>
+      <br>
+          Employer:
+          <input type="text" name="emp" >
+          <p/>
+          Job Title:
+          <input type="text" name="jobTitle" >
+          <p/>
+          Job Duty:
+          <textarea name="jobduty" ></textarea>
+          <p/>
+          Worked Year:
+          <input type="number" name="workedYear" >
+          <p/>
+    </div>
+    <div id="attachment" name="attach">
+        <div id="title-attach" class="title">Attachment</div>
+        <br>
+          <input type="file" name="attachfile" multiple>
+    </div>
+    <p/>
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit" >
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WEB222 - Assignment 6</title>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/assignment6.css" rel="stylesheet">
+	<script type="text/javascript" src="js/assignment6.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <h3>Assignment 6: AJAX</h3>
+   
+		<table>
+			<thead>
+			<tr>
+				<th>User ID</th><th>First Name</th><th>Last Name</th><th class="avatar">Avatar</th>
+			</tr>
+			</thead>
+			<tbody id="data">
+				<tr id="nodata">
+					<td colspan="4">No Data</td>
+				</tr>
+			</tbody>
+		</table>
+        <br >
+        <div class="paging"><button type="button" onclick="makeRequest(1);">First</button>
+		<button class="pgbtn" id="pgbtn1" type="button" onclick="makeRequest(1);">1</button>
+		<button class="pgbtn" id="pgbtn2" type="button" onclick="makeRequest(2);">2</button>
+		<button class="pgbtn" id="pgbtn3" type="button" onclick="makeRequest(3);">3</button>
+		<button class="pgbtn" id="pgbtn4" type="button" onclick="makeRequest(4);">4</button>
+		<button type="button" onclick="makeRequest(4);">Last</button></div>
+    
+      
+    </div>
+  </body>
+</html>
+
